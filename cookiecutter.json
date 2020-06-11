@@ -1,0 +1,7 @@
+{
+    "project_name": "my_project_name",
+    "mysql_root_password": "",
+    "mysql_user": "user",
+    "mysql_user_password": "",
+    "docker_compose_file_version": "3.8"
+}
