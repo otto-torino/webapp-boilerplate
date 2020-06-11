@@ -1,13 +1,13 @@
 # webapp-boilerplate
 
-Basic docker-compose Django coookiecutter
+Experimental Docker-compose Django coookiecutter.
 
 ## Dependencies
 
 * cookiecutter
 * docker-compose
 
-## Instructions
+## Fast Check Instructions
 
 1. `cookiecutter .`
 2. `cd <my_project_name>`
@@ -20,7 +20,7 @@ Basic docker-compose Django coookiecutter
 * Test DB integration
 * Test data persistence
 * DB persistence
-* Multiple database support
+* Multiple database support (supports mysql and postgresql atm)
 * Multiple project template support
 * Deploy support (also, change binds to volumes)
 * Git integration

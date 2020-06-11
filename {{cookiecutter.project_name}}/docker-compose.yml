@@ -1,12 +1,27 @@
 version: '{{cookiecutter.docker_compose_file_version}}'
 services:
+
+  {% if cookiecutter.db_backend == "mysql" %}
+
   db:
     image: mysql
     environment:
       MYSQL_DATABASE: {{cookiecutter.project_name}}
-      MYSQL_USER: {{cookiecutter.mysql_user}}
-      MYSQL_PASSWORD: {{cookiecutter.mysql_user_password}}
-      MYSQL_ROOT_PASSWORD: {{cookiecutter.mysql_root_password}}
+      MYSQL_USER: {{cookiecutter.db_user}}
+      MYSQL_PASSWORD: {{cookiecutter.db_user_password}}
+      MYSQL_ROOT_PASSWORD: {{cookiecutter.db_root_password}}
+
+  {% elif cookiecutter.db_backend == "postgresql" %}
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: {{cookiecutter.project_name}}
+      POSTGRES_USER: {{cookiecutter.db_user}}
+      POSTGRES_PASSWORD: {{cookiecutter.db_root_password}}
+
+  {% endif %}
+
   web:
     build: .
     working_dir: /app

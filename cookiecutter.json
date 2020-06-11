@@ -1,7 +1,8 @@
 {
     "project_name": "my_project_name",
-    "mysql_root_password": "",
-    "mysql_user": "user",
-    "mysql_user_password": "",
+    "db_backend": ["mysql", "postgresql"],
+    "db_root_password": "",
+    "db_user": "user",
+    "db_user_password": "",
     "docker_compose_file_version": "3.8"
 }

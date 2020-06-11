@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.{{cookiecutter.db_backend}}',
         'NAME': '{{cookiecutter.project_name}}',
-        'USER': '{{cookiecutter.mysql_user}}',
-        'PASSWORD': '{{cookiecutter.mysql_user_password}}',
+        'USER': '{{cookiecutter.db_user}}',
+        'PASSWORD': '{{cookiecutter.db_user_password}}',
         'HOST': 'db'
     }
 }
