@@ -1,6 +1,6 @@
 # webapp-boilerplate
 
-Experimental Docker-compose Django coookiecutter.
+Experimental Docker-Compose Django cookiecutter.
 
 ## Dependencies
 
@@ -11,8 +11,8 @@ Experimental Docker-compose Django coookiecutter.
 
 1. `cookiecutter .`
 2. `cd <my_project_name>`
-3. `docker compose build`
-4. `docker compose up`
+3. `docker-compose build`
+4. `docker-compose up`
 5. Wait for DB healthchecks and then visit `localhost:8000`
 
 ## TODO
