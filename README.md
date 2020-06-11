@@ -22,7 +22,7 @@ Basic docker-compose Django coookiecutter
 * DB persistence
 * Multiple database support
 * Multiple project template support
-* Deploy support
+* Deploy support (also, change binds to volumes)
 * Git integration
 * CLI scripts
 * (Multiple framework support)

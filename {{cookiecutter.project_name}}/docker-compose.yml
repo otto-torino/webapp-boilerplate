@@ -12,8 +12,11 @@ services:
     working_dir: /app
     command: bash -c "python3 manage.py wait_for_database && python3 manage.py runserver 0:8000"
     volumes:
-      - ./app:/app
+      - type: bind
+        source: ./app
+        target: /app
     ports:
-      - "8000:8000"
+      - target: 8000
+        published: 8000
     depends_on:
       - db
