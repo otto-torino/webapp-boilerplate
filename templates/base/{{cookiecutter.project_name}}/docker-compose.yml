@@ -7,9 +7,7 @@ services:
     image: mysql
     environment:
       MYSQL_DATABASE: {{cookiecutter.project_name}}
-      MYSQL_USER: {{cookiecutter.db_user}}
-      MYSQL_PASSWORD: {{cookiecutter.db_user_password}}
-      MYSQL_ROOT_PASSWORD: {{cookiecutter.db_root_password}}
+      MYSQL_ROOT_PASSWORD: {{cookiecutter.db_password}}
 
   {% elif cookiecutter.db_backend == "postgresql" %}
 
@@ -17,8 +15,7 @@ services:
     image: postgres
     environment:
       POSTGRES_DB: {{cookiecutter.project_name}}
-      POSTGRES_USER: {{cookiecutter.db_user}}
-      POSTGRES_PASSWORD: {{cookiecutter.db_root_password}}
+      POSTGRES_PASSWORD: {{cookiecutter.db_password}}
 
   {% endif %}
 
@@ -28,7 +25,7 @@ services:
     command: bash -c "python3 manage.py wait_for_database && python3 manage.py runserver 0:8000"
     volumes:
       - type: bind
-        source: ./app
+        source: ./{{cookiecutter.project_name}}
         target: /app
     ports:
       - target: 8000

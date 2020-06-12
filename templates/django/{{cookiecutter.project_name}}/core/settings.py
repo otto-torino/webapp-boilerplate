@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.{{cookiecutter.db_backend}}',
         'NAME': '{{cookiecutter.project_name}}',
         'USER': '{{cookiecutter.db_user}}',
-        'PASSWORD': '{{cookiecutter.db_user_password}}',
+        'PASSWORD': '{{cookiecutter.db_password}}',
         'HOST': 'db'
     }
 }
