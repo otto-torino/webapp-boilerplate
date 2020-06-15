@@ -52,7 +52,7 @@ DATABASES = {
         'HOST': env('DB_HOST', 'localhost'),
         'USER': env('DB_USER', '{{ cookiecutter.repo_name }}'),
         'PASSWORD': env('DB_PASSWORD', required=True),
-        'PORT': env('DB_PORT', 3306),
+        'PORT': env('DB_PORT', 3307),
         'OPTIONS': {
             'init_command': 'SET default_storage_engine=InnoDB',
         }

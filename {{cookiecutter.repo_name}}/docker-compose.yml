@@ -8,11 +8,10 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-    command: --init-file /home/app/compose/init.local.sql
+      MYSQL_DATABASE: "db_{{ cookiecutter.repo_name }}"
     ports:
-      - '3306:3306'
+      - '3307:3306'
     volumes:
-      - ./compose/db:/home/app/compose
       - db-data:/var/lib/mysql
 
   app:
