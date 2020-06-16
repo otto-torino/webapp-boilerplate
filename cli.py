@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     cookiecutter(repo, no_input=True, extra_context=context, directory=template, output_dir=output_dir)
 
-    template   = '/'.join(['templates', context['django_template']])
-    output_dir = '/'.join([output_dir, context['project_name']])
+    template   = f'templates/{context['django_template']}'
+    output_dir = f'{output_dir}/{context['project_name']}'
 
     cookiecutter(repo, no_input=True, extra_context=context, directory=template, output_dir=output_dir)
